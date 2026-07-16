@@ -1,0 +1,8 @@
+node_modules/
+build/
+release/
+main.js
+*.zip
+data.json
+.env
+.DS_Store
