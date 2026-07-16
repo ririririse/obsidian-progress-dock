@@ -1,7 +1,7 @@
 {
   "id": "progress-dock",
   "name": "Progress Dock",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "minAppVersion": "1.7.2",
   "description": "Track numeric goals, deadlines, countdowns, and branching learning roadmaps in a dockable dashboard.",
   "author": "Chen Wanxuan",
