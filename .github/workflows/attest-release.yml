@@ -1,0 +1,44 @@
+name: Attest release assets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+  artifact-metadata: write
+
+jobs:
+  build-and-attest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build release assets
+        run: pnpm run build
+
+      - name: Attest main.js
+        uses: actions/attest@v4
+        with:
+          subject-path: release/main.js
+
+      - name: Attest styles.css
+        uses: actions/attest@v4
+        with:
+          subject-path: release/styles.css
