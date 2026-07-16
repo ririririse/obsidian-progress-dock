@@ -1,0 +1,14 @@
+{
+  "name": "progress-dock",
+  "version": "1.0.3",
+  "private": true,
+  "description": "A dockable progress, deadline, and branching learning roadmap dashboard for Obsidian.",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-build.mjs",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
