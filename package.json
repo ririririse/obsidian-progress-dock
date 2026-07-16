@@ -1,6 +1,6 @@
 {
   "name": "progress-dock",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "description": "A dockable progress, deadline, and branching learning roadmap dashboard for Obsidian.",
   "main": "main.js",
