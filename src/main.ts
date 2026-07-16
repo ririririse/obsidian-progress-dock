@@ -641,10 +641,6 @@ class ProgressDockPlugin extends ObsidianPlugin {
     });
   }
 
-  onunload() {
-    this.app.workspace.detachLeavesOfType(VIEW_TYPE);
-  }
-
   async activateView(reveal = true) {
     let leaf = this.app.workspace.getLeavesOfType(VIEW_TYPE)[0];
     if (!leaf) {
